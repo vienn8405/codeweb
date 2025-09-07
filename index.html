@@ -1,96 +1,305 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nhà hàng Việt - Trải nghiệm ẩm thực đẳng cấp, thực đơn phong phú với các món ăn ngon và dịch vụ tuyệt vời.">
-  <meta name="keywords" content="nhà hàng, ẩm thực, món ngon, ăn uống, nhà hàng Việt, đặt bàn">
-  <meta name="author" content="Nhà hàng Việt">
-  <title>Nhà hàng Việt - Ẩm thực đẳng cấp</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nhà Hàng Việt</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Header -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Trang chủ</a></li>
-        <li><a href="#menu">Thực đơn</a></li>
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-      </ul>
-    </nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <span class="logo">🍜</span>
+        <span>Nhà Hàng Việt</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#menu">Thực đơn</a>
+        <a href="#about">Giới thiệu</a>
+        <a href="#contact">Liên hệ</a>
+      </nav>
+      <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
+        🛒 <span id="cart-count">0</span>
+      </button>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <h1>Chào mừng đến với Nhà hàng Việt</h1>
-    <p>Trải nghiệm ẩm thực đẳng cấp, thực đơn phong phú và dịch vụ tận tâm.</p>
-    <a href="#menu" class="cta-button">Khám phá thực đơn</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/phobo.jpg" alt="Phở bò" class="hero-bg" />
+    <div class="container hero-content">
+      <h1>Ẩm thực Việt – Đậm đà bản sắc</h1>
+      <p>Chọn món bạn yêu thích, đặt đơn trong 1 chạm. Giao nhanh – nóng hổi!</p>
+      <a href="#menu" class="btn btn-primary">Xem thực đơn</a>
+    </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>Giới thiệu về Nhà hàng Việt</h2>
-    <p>Nhà hàng Việt tự hào cung cấp một trải nghiệm ẩm thực độc đáo với các món ăn đa dạng từ Á đến Âu. Mỗi món ăn đều được chuẩn bị từ nguyên liệu tươi ngon, đảm bảo chất lượng và hương vị tuyệt vời. Hãy đến và thưởng thức bữa ăn tuyệt vời cùng gia đình và bạn bè.</p>
-  </section>
+  <!-- Menu -->
+  <main id="menu" class="container section">
+    <h2 class="section-title">Thực đơn hôm nay</h2>
 
-  <!-- Menu Section -->
-  <section id="menu">
-    <h2>Thực đơn của chúng tôi</h2>
-    <ul>
-      <li>
-        <img src="images/phobo.jpg" alt="Phở bò" />
-        <h3>Phở bò</h3>
-        <p>50.000 VND</p>
-        <p class="description">Món phở bò truyền thống với nước dùng thơm ngon, bánh phở mềm mịn và thịt bò tươi ngon.</p>
-      </li>
-      <li>
-        <img src="images/banhmithitnuong.jpg" alt="Bánh mì thịt nướng" />
-        <h3>Bánh mì thịt nướng</h3>
-        <p>35.000 VND</p>
-        <p class="description">Bánh mì giòn với thịt nướng thơm lừng, kết hợp cùng các loại rau sống và nước sốt đặc biệt.</p>
-      </li>
-      <li>
-        <img src="images/salad.jpg" alt="Salad trái cây" />
-        <h3>Salad trái cây</h3>
-        <p>30.000 VND</p>
-        <p class="description">Salad tươi ngon với sự kết hợp của các loại trái cây mùa hè tươi mát.</p>
-      </li>
-      <li>
-        <img src="images/comtam.jpg" alt="Cơm tấm sườn" />
-        <h3>Cơm tấm sườn</h3>
-        <p>60.000 VND</p>
-        <p class="description">Cơm tấm mềm dẻo ăn kèm với sườn nướng thơm lừng và rau sống tươi ngon.</p>
-      </li>
-      <li>
+    <div class="grid">
+      <!-- Card: Bánh chưng -->
+      <article class="card"
+               data-id="banhchung"
+               data-title="Bánh chưng"
+               data-price="45000"
+               data-desc="Nếp xanh dẻo, thịt ba rọi, đậu xanh – chuẩn vị ngày Tết.">
         <img src="images/banhchung.jpg" alt="Bánh chưng" />
-        <h3>Bánh chưng</h3>
-        <p>40.000 VND</p>
-        <p class="description">Bánh chưng truyền thống của người Việt với gạo nếp dẻo, thịt lợn và đậu xanh thơm ngon.</p>
-      </li>
-    </ul>
+        <div class="card-body">
+          <h3>Bánh chưng</h3>
+          <p class="price">45.000đ</p>
+          <p class="desc">Nếp xanh dẻo, thịt ba rọi, đậu xanh…</p>
+          <div class="actions">
+            <button class="btn btn-outline view-btn">Chi tiết</button>
+            <button class="btn add-btn">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card: Bánh mì thịt nướng -->
+      <article class="card"
+               data-id="banhmi"
+               data-title="Bánh mì thịt nướng"
+               data-price="35000"
+               data-desc="Thịt nướng sốt đậm, đồ chua giòn, rau thơm tươi.">
+        <img src="images/banhmithitnuong.jpg" alt="Bánh mì thịt nướng" />
+        <div class="card-body">
+          <h3>Bánh mì thịt nướng</h3>
+          <p class="price">35.000đ</p>
+          <p class="desc">Sốt đậm đà, đồ chua giòn…</p>
+          <div class="actions">
+            <button class="btn btn-outline view-btn">Chi tiết</button>
+            <button class="btn add-btn">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card: Cơm tấm sườn trứng -->
+      <article class="card"
+               data-id="comtam"
+               data-title="Cơm tấm sườn trứng"
+               data-price="55000"
+               data-desc="Sườn ướp mật ong nướng than, trứng ốp la, bì chả.">
+        <img src="images/comtam.jpg" alt="Cơm tấm sườn trứng" />
+        <div class="card-body">
+          <h3>Cơm tấm sườn trứng</h3>
+          <p class="price">55.000đ</p>
+          <p class="desc">Sườn nướng thơm, bì chả, mỡ hành…</p>
+          <div class="actions">
+            <button class="btn btn-outline view-btn">Chi tiết</button>
+            <button class="btn add-btn">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card: Phở bò -->
+      <article class="card"
+               data-id="pho"
+               data-title="Phở bò tái nạm"
+               data-price="65000"
+               data-desc="Nước dùng hầm xương 12 giờ, bánh phở mềm, bò tái nạm.">
+        <img src="images/phobo.jpg" alt="Phở bò" />
+        <div class="card-body">
+          <h3>Phở bò tái nạm</h3>
+          <p class="price">65.000đ</p>
+          <p class="desc">Nước dùng trong, vị ngọt xương…</p>
+          <div class="actions">
+            <button class="btn btn-outline view-btn">Chi tiết</button>
+            <button class="btn add-btn">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card: Salad -->
+      <article class="card"
+               data-id="salad"
+               data-title="Salad rau củ"
+               data-price="32000"
+               data-desc="Xanh – giòn – tươi với sốt chua ngọt nhẹ.">
+        <img src="images/salad.jpg" alt="Salad" />
+        <div class="card-body">
+          <h3>Salad rau củ</h3>
+          <p class="price">32.000đ</p>
+          <p class="desc">Thanh mát, ít calo…</p>
+          <div class="actions">
+            <button class="btn btn-outline view-btn">Chi tiết</button>
+            <button class="btn add-btn">Thêm vào giỏ</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+    <!-- About -->
+  <section id="about" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Về chúng tôi</h2>
+      <p>
+        Nhà Hàng Việt ra đời với sứ mệnh mang đến cho thực khách những trải nghiệm ẩm thực
+        đậm đà hồn quê nhưng vẫn tinh tế và hiện đại. Từ những chiếc bánh chưng xanh ngày Tết,
+        ổ bánh mì thịt nướng giòn rụm đến tô phở nóng hổi buổi sáng – chúng tôi đều chọn lựa
+        nguyên liệu tươi ngon nhất, chế biến công phu nhất.
+      </p>
+      <p>
+        Chúng tôi tin rằng, một bữa ăn không chỉ để no bụng mà còn là khoảnh khắc gắn kết gia đình,
+        bạn bè và đồng nghiệp. Chính vì thế, mỗi món ăn tại Nhà Hàng Việt đều được chăm chút
+        như một lời tri ân gửi đến khách hàng thân yêu.
+      </p>
+      <p>
+        Với không gian ấm cúng, dịch vụ tận tình và hương vị khó quên, Nhà Hàng Việt hy vọng sẽ
+        trở thành điểm đến quen thuộc của bạn mỗi khi muốn thưởng thức ẩm thực Việt chuẩn vị.
+      </p>
+    </div>
+  </section>
+    <!-- Reservation -->
+  <section id="reservation" class="section">
+    <div class="container">
+      <h2 class="section-title">Đặt bàn trực tuyến</h2>
+      <p>Điền thông tin bên dưới, chúng tôi sẽ xác nhận đặt bàn cho bạn trong thời gian sớm nhất.</p>
+
+      <form id="reservation-form" class="form">
+        <label>Họ tên
+          <input required name="name" placeholder="Nguyễn Văn A">
+        </label>
+        <label>Số điện thoại
+          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
+        </label>
+        <label>Số khách
+          <input required type="number" min="1" max="50" name="guests" value="2">
+        </label>
+        <label>Ngày
+          <input required type="date" name="date">
+        </label>
+        <label>Giờ
+          <input required type="time" name="time">
+        </label>
+        <label>Yêu cầu đặc biệt
+          <textarea name="note" rows="3" placeholder="Bàn gần cửa sổ, trang trí sinh nhật..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Xác nhận đặt bàn</button>
+      </form>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Liên hệ với chúng tôi</h2>
-    <form action="mailto:contact@restaurant.com" method="post" enctype="text/plain">
-      <label for="name">Tên:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Tin nhắn:</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Gửi</button>
-    </form>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Liên hệ với chúng tôi</h2>
+      <p>
+        Hãy để lại thông tin và lời nhắn, đội ngũ Nhà Hàng Việt sẽ liên hệ lại với bạn
+        trong thời gian sớm nhất.
+      </p>
+      <form id="contact-form" class="form">
+        <label>Họ tên
+          <input required name="name" placeholder="Nguyễn Văn A">
+        </label>
+        <label>Email
+          <input required type="email" name="email" placeholder="abc@gmail.com">
+        </label>
+        <label>Số điện thoại
+          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
+        </label>
+        <label>Lời nhắn
+          <textarea name="message" rows="4" placeholder="Tôi muốn đặt bàn cho 4 người vào tối mai..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Gửi liên hệ</button>
+      </form>
+    </div>
+  </section>
+  <!-- Reviews -->
+  <section id="reviews" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Đánh giá của khách hàng</h2>
+
+      <!-- Danh sách review -->
+      <div id="review-list" class="review-list">
+        <!-- review sẽ được thêm vào đây bằng JS -->
+      </div>
+
+      <!-- Form review -->
+      <form id="review-form" class="form">
+        <label>Họ tên
+          <input required name="name" placeholder="Nguyễn Văn A">
+        </label>
+        <label>Chất lượng (1–5 ⭐)
+          <select name="rating" required>
+            <option value="">-- Chọn số sao --</option>
+            <option value="5">⭐⭐⭐⭐⭐ (Rất hài lòng)</option>
+            <option value="4">⭐⭐⭐⭐ (Hài lòng)</option>
+            <option value="3">⭐⭐⭐ (Bình thường)</option>
+            <option value="2">⭐⭐ (Chưa tốt)</option>
+            <option value="1">⭐ (Tệ)</option>
+          </select>
+        </label>
+        <label>Đánh giá chi tiết
+          <textarea name="comment" rows="3" placeholder="Món ăn ngon, phục vụ nhanh, không gian thoáng..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Gửi đánh giá</button>
+      </form>
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Nhà hàng Việt. Tất cả quyền lợi được bảo lưu.</p>
-  </footer>
+
+  <!-- Modal chi tiết món -->
+  <div id="dish-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Đóng">×</button>
+      <img id="modal-img" alt="">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price" class="price"></p>
+      <p id="modal-desc"></p>
+      <button id="modal-add" class="btn">Thêm vào giỏ</button>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <aside id="cart" class="cart hidden" aria-label="Giỏ hàng">
+    <div class="cart-header">
+      <h3>Giỏ hàng</h3>
+      <button id="cart-close" class="icon-btn" aria-label="Đóng">×</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="totals">
+        <div><span>Tạm tính:</span><strong id="subtotal">0đ</strong></div>
+        <div><span>VAT (8%):</span><strong id="vat">0đ</strong></div>
+        <div class="grand"><span>Tổng cộng:</span><strong id="grand">0đ</strong></div>
+      </div>
+      <button id="checkout-btn" class="btn btn-primary">Đặt hàng</button>
+    </div>
+  </aside>
+
+  <!-- Checkout form -->
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" data-close-checkout aria-label="Đóng">×</button>
+      <h3>Thông tin đặt hàng</h3>
+      <form id="checkout-form" class="form">
+        <label>Họ tên
+          <input required name="name" placeholder="Nguyễn Văn A">
+        </label>
+        <label>Số điện thoại
+          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
+        </label>
+        <label>Địa chỉ giao
+          <input required name="address" placeholder="Số nhà, đường, quận">
+        </label>
+        <label>Ghi chú
+          <textarea name="note" rows="3" placeholder="Không cay, thêm hành…"></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Xác nhận đặt</button>
+      </form>
+    </div>
+  </div>
+  <!-- Chat Widget -->
+  <div class="chat-widget">
+    <a href="https://zalo.me/09xxxxxxxx" target="_blank" class="chat-btn zalo">💬 Chat Zalo</a>
+    <a href="https://m.me/usernamefacebook" target="_blank" class="chat-btn messenger">💬 Messenger</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
