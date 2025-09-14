@@ -8,22 +8,8 @@
 </head>
 <body>
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <div class="brand">
-        <span class="logo">🍜</span>
-        <span>Nhà Hàng Việt</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#menu">Thực đơn</a>
-        <a href="#about">Giới thiệu</a>
-        <a href="#contact">Liên hệ</a>
-      </nav>
-      <button id="cart-btn" class="cart-btn" aria-label="Mở giỏ hàng">
-        🛒 <span id="cart-count">0</span>
-      </button>
-    </div>
-  </header>
+   <!-- Phần Header sẽ được tải vào từ header.html -->
+  <header></header>
 
   <!-- Hero -->
   <section class="hero">
@@ -37,101 +23,8 @@
   </section>
 
   <!-- Menu -->
-  <main id="menu" class="container section">
-    <h2 class="section-title">Thực đơn hôm nay</h2>
-
-    <div class="grid">
-      <!-- Card: Bánh chưng -->
-      <article class="card"
-               data-id="banhchung"
-               data-title="Bánh chưng"
-               data-price="45000"
-               data-desc="Nếp xanh dẻo, thịt ba rọi, đậu xanh – chuẩn vị ngày Tết.">
-        <img src="images/banhchung.jpg" alt="Bánh chưng" />
-        <div class="card-body">
-          <h3>Bánh chưng</h3>
-          <p class="price">45.000đ</p>
-          <p class="desc">Nếp xanh dẻo, thịt ba rọi, đậu xanh…</p>
-          <div class="actions">
-            <button class="btn btn-outline view-btn">Chi tiết</button>
-            <button class="btn add-btn">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card: Bánh mì thịt nướng -->
-      <article class="card"
-               data-id="banhmi"
-               data-title="Bánh mì thịt nướng"
-               data-price="35000"
-               data-desc="Thịt nướng sốt đậm, đồ chua giòn, rau thơm tươi.">
-        <img src="images/banhmithitnuong.jpg" alt="Bánh mì thịt nướng" />
-        <div class="card-body">
-          <h3>Bánh mì thịt nướng</h3>
-          <p class="price">35.000đ</p>
-          <p class="desc">Sốt đậm đà, đồ chua giòn…</p>
-          <div class="actions">
-            <button class="btn btn-outline view-btn">Chi tiết</button>
-            <button class="btn add-btn">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card: Cơm tấm sườn trứng -->
-      <article class="card"
-               data-id="comtam"
-               data-title="Cơm tấm sườn trứng"
-               data-price="55000"
-               data-desc="Sườn ướp mật ong nướng than, trứng ốp la, bì chả.">
-        <img src="images/comtam.jpg" alt="Cơm tấm sườn trứng" />
-        <div class="card-body">
-          <h3>Cơm tấm sườn trứng</h3>
-          <p class="price">55.000đ</p>
-          <p class="desc">Sườn nướng thơm, bì chả, mỡ hành…</p>
-          <div class="actions">
-            <button class="btn btn-outline view-btn">Chi tiết</button>
-            <button class="btn add-btn">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card: Phở bò -->
-      <article class="card"
-               data-id="pho"
-               data-title="Phở bò tái nạm"
-               data-price="65000"
-               data-desc="Nước dùng hầm xương 12 giờ, bánh phở mềm, bò tái nạm.">
-        <img src="images/phobo.jpg" alt="Phở bò" />
-        <div class="card-body">
-          <h3>Phở bò tái nạm</h3>
-          <p class="price">65.000đ</p>
-          <p class="desc">Nước dùng trong, vị ngọt xương…</p>
-          <div class="actions">
-            <button class="btn btn-outline view-btn">Chi tiết</button>
-            <button class="btn add-btn">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card: Salad -->
-      <article class="card"
-               data-id="salad"
-               data-title="Salad rau củ"
-               data-price="32000"
-               data-desc="Xanh – giòn – tươi với sốt chua ngọt nhẹ.">
-        <img src="images/salad.jpg" alt="Salad" />
-        <div class="card-body">
-          <h3>Salad rau củ</h3>
-          <p class="price">32.000đ</p>
-          <p class="desc">Thanh mát, ít calo…</p>
-          <div class="actions">
-            <button class="btn btn-outline view-btn">Chi tiết</button>
-            <button class="btn add-btn">Thêm vào giỏ</button>
-          </div>
-        </div>
-      </article>
-    </div>
-  </main>
+   <!-- Phần Menu sẽ được tải vào từ menu.html -->
+  <section id="menu"></section>
 
     <!-- About -->
   <section id="about" class="section section-alt">
@@ -300,7 +193,24 @@
     <a href="https://zalo.me/09xxxxxxxx" target="_blank" class="chat-btn zalo">💬 Chat Zalo</a>
     <a href="https://m.me/usernamefacebook" target="_blank" class="chat-btn messenger">💬 Messenger</a>
   </div>
-
+  <footer></footer>
   <script src="script.js"></script>
+  <script>
+  // Tải phần Header vào trang từ header.html
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => document.querySelector('header').innerHTML = data);
+
+  // Tải phần Menu vào trang từ menu.html
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => document.querySelector('#menu').innerHTML = data);
+
+  // Tải phần Footer vào trang từ footer.html
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.querySelector('footer').innerHTML = data);
+</script>
+
 </body>
 </html>
