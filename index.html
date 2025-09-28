@@ -1,216 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nhà Hàng Việt</title>
-  <link rel="stylesheet" href="styles.css" />
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bữa tối 15 phút cho người đi làm | Trang chủ</title>
+    <meta name="description" content="Công thức bữa tối 15 phút, ít nguyên liệu cho người bận rộn.">
+    <link rel="canonical" href="https://example.com/"/>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bữa tối 15 phút cho người đi làm | Trang chủ" />
+    <meta property="og:description" content="Công thức bữa tối 15 phút, ít nguyên liệu cho người bận rộn." />
+    <meta property="og:image" content="/assets/img/og-default.webp" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Bữa tối 15 phút",
+      "url": "https://example.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://example.com/search?q={query}",
+        "query-input": "required name=query"
+      }
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+  <link rel="stylesheet" href="/assets/css/style.css"/>
 </head>
-<body>
-  <!-- Navbar -->
-   <!-- Phần Header sẽ được tải vào từ header.html -->
-  <header></header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <img src="images/phobo.jpg" alt="Phở bò" class="hero-bg" />
-    <div class="container hero-content">
-      <h1>Ẩm thực Việt – Đậm đà bản sắc</h1>
-      <p>Chọn món bạn yêu thích, đặt đơn trong 1 chạm. Giao nhanh – nóng hổi!</p>
-      <a href="#menu" class="btn btn-primary">Xem thực đơn</a>
-    </div>
-  </section>
-
-  <!-- Menu -->
-   <!-- Phần Menu sẽ được tải vào từ menu.html -->
-  <section id="menu"></section>
-
-    <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Về chúng tôi</h2>
-      <p>
-        Nhà Hàng Việt ra đời với sứ mệnh mang đến cho thực khách những trải nghiệm ẩm thực
-        đậm đà hồn quê nhưng vẫn tinh tế và hiện đại. Từ những chiếc bánh chưng xanh ngày Tết,
-        ổ bánh mì thịt nướng giòn rụm đến tô phở nóng hổi buổi sáng – chúng tôi đều chọn lựa
-        nguyên liệu tươi ngon nhất, chế biến công phu nhất.
-      </p>
-      <p>
-        Chúng tôi tin rằng, một bữa ăn không chỉ để no bụng mà còn là khoảnh khắc gắn kết gia đình,
-        bạn bè và đồng nghiệp. Chính vì thế, mỗi món ăn tại Nhà Hàng Việt đều được chăm chút
-        như một lời tri ân gửi đến khách hàng thân yêu.
-      </p>
-      <p>
-        Với không gian ấm cúng, dịch vụ tận tình và hương vị khó quên, Nhà Hàng Việt hy vọng sẽ
-        trở thành điểm đến quen thuộc của bạn mỗi khi muốn thưởng thức ẩm thực Việt chuẩn vị.
-      </p>
-    </div>
-  </section>
-    <!-- Reservation -->
-  <section id="reservation" class="section">
-    <div class="container">
-      <h2 class="section-title">Đặt bàn trực tuyến</h2>
-      <p>Điền thông tin bên dưới, chúng tôi sẽ xác nhận đặt bàn cho bạn trong thời gian sớm nhất.</p>
-
-      <form id="reservation-form" class="form">
-        <label>Họ tên
-          <input required name="name" placeholder="Nguyễn Văn A">
-        </label>
-        <label>Số điện thoại
-          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
-        </label>
-        <label>Số khách
-          <input required type="number" min="1" max="50" name="guests" value="2">
-        </label>
-        <label>Ngày
-          <input required type="date" name="date">
-        </label>
-        <label>Giờ
-          <input required type="time" name="time">
-        </label>
-        <label>Yêu cầu đặc biệt
-          <textarea name="note" rows="3" placeholder="Bàn gần cửa sổ, trang trí sinh nhật..."></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Xác nhận đặt bàn</button>
-      </form>
-    </div>
-  </section>
-
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">Liên hệ với chúng tôi</h2>
-      <p>
-        Hãy để lại thông tin và lời nhắn, đội ngũ Nhà Hàng Việt sẽ liên hệ lại với bạn
-        trong thời gian sớm nhất.
-      </p>
-      <form id="contact-form" class="form">
-        <label>Họ tên
-          <input required name="name" placeholder="Nguyễn Văn A">
-        </label>
-        <label>Email
-          <input required type="email" name="email" placeholder="abc@gmail.com">
-        </label>
-        <label>Số điện thoại
-          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
-        </label>
-        <label>Lời nhắn
-          <textarea name="message" rows="4" placeholder="Tôi muốn đặt bàn cho 4 người vào tối mai..."></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Gửi liên hệ</button>
-      </form>
-    </div>
-  </section>
-  <!-- Reviews -->
-  <section id="reviews" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Đánh giá của khách hàng</h2>
-
-      <!-- Danh sách review -->
-      <div id="review-list" class="review-list">
-        <!-- review sẽ được thêm vào đây bằng JS -->
+<body class="bg-white text-gray-900">
+  <header class="border-b">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+      <a href="/index.html" class="text-2xl font-bold">Bữa tối 15 phút</a>
+      <div class="flex items-center gap-4">
+        <nav class="space-x-4">
+          <a href="/index.html">Trang chủ</a>
+          <a href="/category.html">Danh mục</a>
+          <a href="/about.html">Giới thiệu</a>
+          <a href="/contact.html">Liên hệ</a>
+        </nav>
+        <button id="theme-toggle" class="toggle text-sm border rounded-full px-3 py-1">Dark/Light</button>
       </div>
-
-      <!-- Form review -->
-      <form id="review-form" class="form">
-        <label>Họ tên
-          <input required name="name" placeholder="Nguyễn Văn A">
-        </label>
-        <label>Chất lượng (1–5 ⭐)
-          <select name="rating" required>
-            <option value="">-- Chọn số sao --</option>
-            <option value="5">⭐⭐⭐⭐⭐ (Rất hài lòng)</option>
-            <option value="4">⭐⭐⭐⭐ (Hài lòng)</option>
-            <option value="3">⭐⭐⭐ (Bình thường)</option>
-            <option value="2">⭐⭐ (Chưa tốt)</option>
-            <option value="1">⭐ (Tệ)</option>
-          </select>
-        </label>
-        <label>Đánh giá chi tiết
-          <textarea name="comment" rows="3" placeholder="Món ăn ngon, phục vụ nhanh, không gian thoáng..."></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Gửi đánh giá</button>
-      </form>
     </div>
-  </section>
+  </header>
 
+  <main class="container mx-auto px-4 py-10">
+    <section class="mb-10">
+      <h1 class="text-4xl font-bold mb-2">Công thức nhanh cho người đi làm</h1>
+      <p class="text-gray-700">Mỗi món dưới 15 phút, nguyên liệu dễ kiếm, ít chén dĩa.</p>
+    </section>
 
-  <!-- Modal chi tiết món -->
-  <div id="dish-modal" class="modal hidden">
-    <div class="modal-content">
-      <button class="modal-close" aria-label="Đóng">×</button>
-      <img id="modal-img" alt="">
-      <h3 id="modal-title"></h3>
-      <p id="modal-price" class="price"></p>
-      <p id="modal-desc"></p>
-      <button id="modal-add" class="btn">Thêm vào giỏ</button>
+    <section>
+      <ul id="post-list" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0"></ul>
+      <script id="post-data" type="application/json">[
+        {"title":"Gà áp chảo 15 phút (ít nguyên liệu)","url":"/posts/ga-ap-chao-15p.html","date":"2025-09-28","tags":["15-minute","low-ingredient"],"desc":"Món gà nhanh gọn, 3 bước, ít chén dĩa.","image":"/assets/img/ga-ap-chao-15p.webp"},
+        {"title":"Mì Ý tỏi ớt 12 phút (Aglio e Olio)","url":"/posts/mi-y-toi-ot-12p.html","date":"2025-09-28","tags":["12-minute","5-ingredient"],"desc":"Công thức cổ điển 5 nguyên liệu cho bữa tối bận rộn.","image":"/assets/img/mi-y-toi-ot-12p.webp"},
+        {"title":"Meal prep 2 ngày/4 hộp dưới 150k","url":"/posts/meal-prep-2ngay.html","date":"2025-09-28","tags":["meal-prep","budget"],"desc":"Chuẩn bị sẵn, tối ăn nhanh, phù hợp người đi làm.","image":"/assets/img/meal-prep-2ngay.webp"}
+      ]</script>
+    </section>
+  </main>
+
+  <footer class="border-t">
+    <div class="container mx-auto px-4 py-6 text-sm text-gray-600">
+      © 2025 Bữa tối 15 phút • <a href="/sitemap.xml">Sitemap</a>
     </div>
-  </div>
-
-  <!-- Cart Drawer -->
-  <aside id="cart" class="cart hidden" aria-label="Giỏ hàng">
-    <div class="cart-header">
-      <h3>Giỏ hàng</h3>
-      <button id="cart-close" class="icon-btn" aria-label="Đóng">×</button>
-    </div>
-    <div id="cart-items" class="cart-items"></div>
-    <div class="cart-footer">
-      <div class="totals">
-        <div><span>Tạm tính:</span><strong id="subtotal">0đ</strong></div>
-        <div><span>VAT (8%):</span><strong id="vat">0đ</strong></div>
-        <div class="grand"><span>Tổng cộng:</span><strong id="grand">0đ</strong></div>
-      </div>
-      <button id="checkout-btn" class="btn btn-primary">Đặt hàng</button>
-    </div>
-  </aside>
-
-  <!-- Checkout form -->
-  <div id="checkout-modal" class="modal hidden">
-    <div class="modal-content">
-      <button class="modal-close" data-close-checkout aria-label="Đóng">×</button>
-      <h3>Thông tin đặt hàng</h3>
-      <form id="checkout-form" class="form">
-        <label>Họ tên
-          <input required name="name" placeholder="Nguyễn Văn A">
-        </label>
-        <label>Số điện thoại
-          <input required name="phone" pattern="^0\d{9}$" placeholder="0xxxxxxxxx">
-        </label>
-        <label>Địa chỉ giao
-          <input required name="address" placeholder="Số nhà, đường, quận">
-        </label>
-        <label>Ghi chú
-          <textarea name="note" rows="3" placeholder="Không cay, thêm hành…"></textarea>
-        </label>
-        <button class="btn btn-primary" type="submit">Xác nhận đặt</button>
-      </form>
-    </div>
-  </div>
-  <!-- Chat Widget -->
-  <div class="chat-widget">
-    <a href="https://zalo.me/09xxxxxxxx" target="_blank" class="chat-btn zalo">💬 Chat Zalo</a>
-    <a href="https://m.me/usernamefacebook" target="_blank" class="chat-btn messenger">💬 Messenger</a>
-  </div>
-  <footer></footer>
-  <script src="script.js"></script>
-  <script>
-  // Tải phần Header vào trang từ header.html
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.querySelector('header').innerHTML = data);
-
-  // Tải phần Menu vào trang từ menu.html
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => document.querySelector('#menu').innerHTML = data);
-
-  // Tải phần Footer vào trang từ footer.html
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.querySelector('footer').innerHTML = data);
-</script>
-
+  </footer>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
